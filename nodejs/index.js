@@ -5,9 +5,6 @@ function encrypt(key, message) {
   key = _decodeKey(key)
   let nonce = _generateNonce()
 
-  console.log('key', key.length, key)
-  console.log('nonce', nonce.length, nonce)
-
   // set up cipher
   let cipher = crypto.createCipheriv('aes-256-gcm', key, nonce)
 
