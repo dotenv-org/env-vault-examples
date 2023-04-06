@@ -76,12 +76,12 @@ class EnvVaultExample
     key
   end
 
-  def key_bytes
-    32
-  end
-
   def generate_nonce
     SecureRandom.random_bytes(nonce_bytes)
+  end
+
+  def key_bytes
+    32
   end
 
   def nonce_bytes
@@ -98,5 +98,6 @@ message = "HELLO"
 
 ciphertext = EnvVaultExample.new.encrypt(key, message)
 puts ciphertext
+
 decryptedtext = EnvVaultExample.new.decrypt(key, ciphertext)
 puts decryptedtext
