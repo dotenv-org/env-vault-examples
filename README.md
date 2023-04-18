@@ -15,3 +15,9 @@ node nodejs/index.js
 ```
 ruby ruby/index.rb
 ```
+
+## Go
+
+```
+go run go/index.go
+```
